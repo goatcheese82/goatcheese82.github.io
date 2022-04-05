@@ -2,6 +2,14 @@
   position: fixed;
   top: 0;
   @include MQ(S) {
+    right: 70vw;
+    top: 80vh;
+  }
+  @include MQ(M) {
+    right: 70vw;
+    top: 80vh;
+  }
+  @include MQ(L) {
     right: 5vw;
     top: 30vh;
   }
@@ -69,7 +77,7 @@ $item-3: 300deg;
 }
 
 .wrapper > * li {
-  transform: translateX(-100%);
+  transform: translateX(-120%);
   @include MQ(S) {
     transform: translateX(0);
     display: flex;
@@ -80,6 +88,8 @@ $item-3: 300deg;
 .design-selection:hover ul,
 .design-archives:hover ul,
 .zen-resources:hover ul {
+  background-color: black;
+  border-radius: 1em;
   position: absolute;
   @include MQ(S) {
     position: relative;

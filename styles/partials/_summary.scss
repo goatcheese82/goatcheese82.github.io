@@ -1,0 +1,9 @@
+#zen-summary {
+   @include MQ(S) {
+      padding: 2vw;
+   }
+}
+
+#zen-summary p {
+   line-height: 1;
+}

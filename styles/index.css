@@ -193,8 +193,26 @@ svg.spheres {
   .intro {
     max-height: 15vh;
     top: 0;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 30vw 40vw 20vw;
+        grid-template-columns: 30vw 40vw 20vw;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .intro {
+    max-height: 15vh;
+    top: 0;
+    -ms-grid-columns: 30vw 40vw 20vw;
+        grid-template-columns: 30vw 40vw 20vw;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .intro {
+    max-height: 15vh;
+    top: 0;
+    -ms-grid-columns: 20vw 50vw 20vw;
+        grid-template-columns: 20vw 50vw 20vw;
   }
 }
 
@@ -347,6 +365,16 @@ header h2 {
 #zen-preamble svg {
   width: 7vw;
   height: 7vw;
+}
+
+@media only screen and (min-width: 600px) {
+  #zen-summary {
+    padding: 2vw;
+  }
+}
+
+#zen-summary p {
+  line-height: 1;
 }
 
 .main.supporting {
@@ -556,6 +584,20 @@ main.supporting p {
 
 @media only screen and (min-width: 600px) {
   .sidebar {
+    right: 70vw;
+    top: 80vh;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .sidebar {
+    right: 70vw;
+    top: 80vh;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .sidebar {
     right: 5vw;
     top: 30vh;
   }
@@ -648,8 +690,8 @@ main.supporting p {
 }
 
 .wrapper > * li {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(-120%);
+          transform: translateX(-120%);
 }
 
 @media only screen and (min-width: 600px) {
@@ -669,6 +711,8 @@ main.supporting p {
 .design-selection:hover ul,
 .design-archives:hover ul,
 .zen-resources:hover ul {
+  background-color: black;
+  border-radius: 1em;
   position: absolute;
 }
 
