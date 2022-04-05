@@ -1,20 +1,21 @@
 .intro {
   position: fixed;
   display: grid;
+
   @include MQ(S) {
     max-height: 15vh;
     top: 0;
-    grid-template-columns: 30vw 40vw 20vw;
+    grid-template-columns: 30vw 40vw auto;
   }
   @include MQ(M) {
     max-height: 15vh;
     top: 0;
-    grid-template-columns: 30vw 40vw 20vw;
+    grid-template-columns: 30vw 40vw auto;
   }
   @include MQ(L) {
     max-height: 15vh;
     top: 0;
-    grid-template-columns: 20vw 50vw 20vw;
+    grid-template-columns: 20vw 50vw auto;
   }
 }
 

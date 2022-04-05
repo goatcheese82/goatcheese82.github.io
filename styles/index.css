@@ -193,8 +193,8 @@ svg.spheres {
   .intro {
     max-height: 15vh;
     top: 0;
-    -ms-grid-columns: 30vw 40vw 20vw;
-        grid-template-columns: 30vw 40vw 20vw;
+    -ms-grid-columns: 30vw 40vw auto;
+        grid-template-columns: 30vw 40vw auto;
   }
 }
 
@@ -202,8 +202,8 @@ svg.spheres {
   .intro {
     max-height: 15vh;
     top: 0;
-    -ms-grid-columns: 30vw 40vw 20vw;
-        grid-template-columns: 30vw 40vw 20vw;
+    -ms-grid-columns: 30vw 40vw auto;
+        grid-template-columns: 30vw 40vw auto;
   }
 }
 
@@ -211,8 +211,8 @@ svg.spheres {
   .intro {
     max-height: 15vh;
     top: 0;
-    -ms-grid-columns: 20vw 50vw 20vw;
-        grid-template-columns: 20vw 50vw 20vw;
+    -ms-grid-columns: 20vw 50vw auto;
+        grid-template-columns: 20vw 50vw auto;
   }
 }
 
@@ -359,12 +359,24 @@ header h2 {
   -webkit-animation: scrolling 40s linear infinite;
           animation: scrolling 40s linear infinite;
   padding: 10px;
+  line-height: 1;
   z-index: -1;
 }
 
 #zen-preamble svg {
-  width: 7vw;
-  height: 7vw;
+  width: 10vw;
+  height: 10vw;
+}
+
+@media only screen and (min-width: 600px) {
+  #zen-preamble svg {
+    width: 15vw;
+    height: 15vw;
+  }
+}
+
+#zen-preamble p {
+  text-align: right;
 }
 
 @media only screen and (min-width: 600px) {

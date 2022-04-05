@@ -12,10 +12,19 @@
 #zen-preamble *:not(:first-child) {
   @include scrollText(40s);
   padding: 10px;
+  line-height: 1;
   z-index: -1;
 }
 
 #zen-preamble svg {
-  width: 7vw;
-  height: 7vw;
+  width: 10vw;
+  height: 10vw;
+  @include MQ(S) {
+    width: 15vw;
+    height: 15vw;
+  }
+}
+
+#zen-preamble p {
+  text-align: right;
 }
