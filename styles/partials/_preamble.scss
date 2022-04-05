@@ -17,11 +17,16 @@
 }
 
 #zen-preamble svg {
+  position: absolute;
   width: 10vw;
   height: 10vw;
   @include MQ(S) {
     width: 15vw;
     height: 15vw;
+  }
+  @include MQ(M) {
+    width: 10vw;
+    height: 10vw;
   }
 }
 

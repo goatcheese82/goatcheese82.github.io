@@ -34,7 +34,7 @@ $item-3: 300deg;
 .wrapper ul,
 .wrapper > * {
   display: none;
-  transform: translateX(0);
+  transform: translate(0);
 }
 
 .wrapper > * {
@@ -77,7 +77,6 @@ $item-3: 300deg;
 }
 
 .wrapper > * li {
-  transform: translateX(-120%);
   @include MQ(S) {
     transform: translateX(0);
     display: flex;
@@ -90,7 +89,7 @@ $item-3: 300deg;
 .zen-resources:hover ul {
   background-color: black;
   border-radius: 1em;
-  position: absolute;
+  position: relative;
   @include MQ(S) {
     position: relative;
     list-style-type: none;

@@ -364,6 +364,7 @@ header h2 {
 }
 
 #zen-preamble svg {
+  position: absolute;
   width: 10vw;
   height: 10vw;
 }
@@ -372,6 +373,13 @@ header h2 {
   #zen-preamble svg {
     width: 15vw;
     height: 15vw;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  #zen-preamble svg {
+    width: 10vw;
+    height: 10vw;
   }
 }
 
@@ -642,8 +650,8 @@ main.supporting p {
 .wrapper ul,
 .wrapper > * {
   display: none;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translate(0);
+          transform: translate(0);
 }
 
 .wrapper > * {
@@ -701,11 +709,6 @@ main.supporting p {
   transition: height 0.5s, width 0.5s, transform 0.5s, -webkit-transform 0.5s;
 }
 
-.wrapper > * li {
-  -webkit-transform: translateX(-120%);
-          transform: translateX(-120%);
-}
-
 @media only screen and (min-width: 600px) {
   .wrapper > * li {
     -webkit-transform: translateX(0);
@@ -725,7 +728,7 @@ main.supporting p {
 .zen-resources:hover ul {
   background-color: black;
   border-radius: 1em;
-  position: absolute;
+  position: relative;
 }
 
 @media only screen and (min-width: 600px) {
