@@ -1,0 +1,24 @@
+//breakpoints
+
+$S: 600px;
+$M: 950px;
+$L: 1200px;
+
+
+@mixin MQ($canvas) {
+   @if $canvas == S {
+    @media only screen and (min-width: $S) { @content; } 
+   }
+   @else if $canvas == M {
+    @media only screen and (min-width: $M) { @content; } 
+   }
+   @else if $canvas == L {
+    @media only screen and (min-width: $L) { @content; } 
+   }
+ }
+ 
+ 
+ @mixin column($percentage, $float-direction:left) {
+   width: 100% * $percentage;
+   float: $float-direction;
+ }

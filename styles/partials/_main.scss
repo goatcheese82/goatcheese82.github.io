@@ -1,0 +1,63 @@
+.main.supporting {
+   margin-top: 40vh;
+   @include MQ(S) {
+      margin-top: 20vh;
+   }
+   @include MQ(M) {
+      margin-top: 20vh;
+   }
+   @include MQ(L) {
+      margin-top: 20vh;
+   }
+ }
+ 
+ .main.supporting > *:not(:last-child) {
+   @include sphere(25vh, 25vh, $color-3);
+   align-items: center;
+   bottom: 20vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   padding: 6rem;
+   position: sticky;
+   margin: auto auto auto 0;
+   z-index: -1;
+   overflow: hidden;
+   @include MQ(S) {
+      @include sphere(40vh, 40vh, $color-3);
+      margin: auto auto auto 0;
+      bottom: 40vh;
+   }
+   @include MQ(M) {
+      @include sphere(55vh, 55vh, $color-3);
+      margin: auto auto auto 3vw;
+      bottom: 25vh;
+   }
+   @include MQ(L) {
+      @include sphere(60vh, 60vh, $color-3);
+      bottom: 10vh;
+   }
+ }
+ 
+ .main.supporting > *:nth-child(2) {
+   z-index: -2;
+ }
+ 
+ .main.supporting > *:nth-child(3) {
+   z-index: -3;
+ }
+ 
+ .main.supporting > *:nth-child(4) {
+    z-index: -4;
+    margin-bottom: 100vh;
+   }
+
+main.supporting p {
+   transform: translateX(200%);
+   width: 50vw;
+}
+
+@import "./explanation";
+@import "./participation";
+@import "./requirements";
+@import "./benefits";

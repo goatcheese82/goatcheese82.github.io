@@ -1,0 +1,15 @@
+$color-1: #031926; // Rich Black FOGRA 29
+$color-2: #77aca2; // Green Sheen
+$color-3: #468189; // Metallic Seaweed
+$color-4: #9dbebb; // Cornflower Blue - Action color
+$color-5: #f4e9cd; // Champagne
+
+
+body {
+   background-color: $color-1;
+}
+
+.svg-text {
+   fill: white;
+   font-size: .5em;
+}

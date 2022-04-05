@@ -1,0 +1,14 @@
+#zen-explanation h3 {
+   @include scrollSphereContainer
+}
+
+#zen-explanation .spheres {
+   position: absolute;
+   width: 0;
+   height: 0;
+   @include orbit(10s);
+}
+
+#zen-explanation p {
+   @include marqueeText(60s);
+}

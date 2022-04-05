@@ -1,0 +1,21 @@
+@import "./scrolling_text_sphere";
+
+#zen-preamble {
+  display: none;
+  @include MQ(S) {
+    display: block;
+    @include scrollSphereContainer;
+    max-height: 20vh;
+  }
+}
+
+#zen-preamble *:not(:first-child) {
+  @include scrollText(40s);
+  padding: 10px;
+  z-index: -1;
+}
+
+#zen-preamble svg {
+  width: 7vw;
+  height: 7vw;
+}

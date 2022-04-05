@@ -1,0 +1,14 @@
+#zen-requirements {
+   @include scrollSphereContainer
+}
+
+#zen-requirements p {
+   @include marqueeText(40s);
+}
+
+#zen-requirements .spheres {
+   position: absolute;
+   width: 0;
+   height: 0;
+   @include orbit(10s);
+}

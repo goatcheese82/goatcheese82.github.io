@@ -1,0 +1,14 @@
+#zen-benefits {
+   @include scrollSphereContainer
+}
+
+#zen-benefits p {
+   @include marqueeText(80s);
+}
+
+#zen-benefits .spheres {
+   position: absolute;
+   width: 0;
+   height: 0;
+   @include orbit(10s);
+}

@@ -1,0 +1,92 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  @include MQ(S) {
+    right: 5vw;
+    top: 30vh;
+  }
+}
+
+$item-1: 180deg;
+$item-2: 240deg;
+$item-3: 300deg;
+
+.wrapper {
+  @include sphere(10vw, 10vw, $color-2);
+  position: fixed;
+  right: 10vw;
+  top: 5vh;
+  width: 10vw;
+  display: flex;
+  @include MQ(S) {
+    position: relative;
+  }
+}
+
+.wrapper ul,
+.wrapper > * {
+  display: none;
+  transform: translateX(0);
+}
+
+.wrapper > * {
+  display: block;
+  @include MQ(S) {
+    position: absolute;
+    top: calc(50% - 1vw);
+    left: calc(50% - 1vw);
+  }
+}
+
+#design-selection {
+  @include MQ(S) {
+    @include circle($item-1, 7vw);
+  }
+}
+
+#design-archives {
+  @include MQ(S) {
+    @include circle($item-2, 7vw);
+  }
+}
+
+#zen-resources {
+  @include MQ(S) {
+    @include circle($item-3, 7vw);
+  }
+}
+
+.wrapper svg.spheres {
+  cursor: pointer;
+  @include sphere(4vw, 4vw, $color-2);
+  font-size: 1em;
+  width: 5vw;
+  height: 5vw;
+  display: inline-block;
+  top: calc(50% - 4vw);
+  left: calc(50% - 4vw);
+  transition: height 0.5s, width 0.5s, transform 0.5s;
+}
+
+.wrapper > * li {
+  transform: translateX(-100%);
+  @include MQ(S) {
+    transform: translateX(0);
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.design-selection:hover ul,
+.design-archives:hover ul,
+.zen-resources:hover ul {
+  position: absolute;
+  @include MQ(S) {
+    position: relative;
+    list-style-type: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+  }
+}

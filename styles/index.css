@@ -1,0 +1,710 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&family=Khula:wght@300&display=swap");
+body {
+  background-color: #031926;
+}
+
+.svg-text {
+  fill: white;
+  font-size: .5em;
+}
+
+body {
+  font-family: "Khula", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Baloo Bhaijaan 2", cursive;
+  color: #77aca2;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 0.4em;
+}
+
+@media only screen and (min-width: 600px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1em 0;
+}
+
+@media only screen and (min-width: 600px) {
+  h2 {
+    font-size: 1.8rem;
+    margin: 1em 0 1.4em;
+  }
+}
+
+h3 {
+  font-size: 2.5rem;
+  color: #9dbebb;
+}
+
+section > h2::before {
+  /* number before each section title */
+  color: #6f9f9b;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: white;
+}
+
+p a {
+  color: #77aca2;
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 600px) {
+  p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+}
+
+a {
+  color: #f4e9cd;
+}
+
+a:hover {
+  color: #468189;
+  text-shadow: 0 0 5px #f4e9cd;
+}
+
+a:visited {
+  color: #468189;
+}
+
+svg.spheres {
+  height: 80vw;
+  width: 80vw;
+  aspect-ratio: 1 / 1;
+  background: red;
+  border-radius: 50%;
+  background: radial-gradient(circle at 26.66667vw 26.66667vw, red, black);
+  -webkit-box-shadow: 8vw 8vw 16vw rgba(0, 0, 0, 0.2);
+          box-shadow: 8vw 8vw 16vw rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (min-width: 1200px) {
+  svg.spheres {
+    height: 12vw;
+    width: 12vw;
+    aspect-ratio: 1 / 1;
+    background: red;
+    border-radius: 50%;
+    background: radial-gradient(circle at 4vw 4vw, red, black);
+    -webkit-box-shadow: 1.2vw 1.2vw 2.4vw rgba(0, 0, 0, 0.2);
+            box-shadow: 1.2vw 1.2vw 2.4vw rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  svg.spheres {
+    height: 10vw;
+    width: 10vw;
+    aspect-ratio: 1 / 1;
+    background: red;
+    border-radius: 50%;
+    background: radial-gradient(circle at 3.33333vw 3.33333vw, red, black);
+    -webkit-box-shadow: 1vw 1vw 2vw rgba(0, 0, 0, 0.2);
+            box-shadow: 1vw 1vw 2vw rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  svg.spheres {
+    height: 20vw;
+    width: 20vw;
+    aspect-ratio: 1 / 1;
+    background: red;
+    border-radius: 50%;
+    background: radial-gradient(circle at 6.66667vw 6.66667vw, red, black);
+    -webkit-box-shadow: 2vw 2vw 4vw rgba(0, 0, 0, 0.2);
+            box-shadow: 2vw 2vw 4vw rgba(0, 0, 0, 0.2);
+  }
+}
+
+@-webkit-keyframes orbit {
+  0% {
+    top: 20%;
+    left: 20%;
+    width: 0;
+    height: 0;
+  }
+  50% {
+    top: 5%;
+    left: 50%;
+    width: 12vw;
+    height: 12vw;
+  }
+  100% {
+    top: 20%;
+    left: 80%;
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes orbit {
+  0% {
+    top: 20%;
+    left: 20%;
+    width: 0;
+    height: 0;
+  }
+  50% {
+    top: 5%;
+    left: 50%;
+    width: 12vw;
+    height: 12vw;
+  }
+  100% {
+    top: 20%;
+    left: 80%;
+    width: 0;
+    height: 0;
+  }
+}
+
+.intro {
+  position: fixed;
+  display: -ms-grid;
+  display: grid;
+}
+
+@media only screen and (min-width: 600px) {
+  .intro {
+    max-height: 15vh;
+    top: 0;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+#zen-summary {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  #zen-summary {
+    display: inline-block;
+  }
+}
+
+header h2 {
+  position: fixed;
+  bottom: 0;
+  left: none;
+}
+
+@media only screen and (min-width: 600px) {
+  header h2 {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transform-origin: top right;
+            transform-origin: top right;
+    position: fixed;
+    bottom: 5vh;
+    right: 0;
+  }
+}
+
+#title {
+  width: 10em;
+}
+
+#title > .spheres {
+  height: 40vw;
+  width: 40vw;
+  aspect-ratio: 1 / 1;
+  background: #468189;
+  border-radius: 50%;
+  background: radial-gradient(circle at 13.33333vw 13.33333vw, #468189, black);
+  -webkit-box-shadow: 4vw 4vw 8vw rgba(0, 0, 0, 0.2);
+          box-shadow: 4vw 4vw 8vw rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 5vh;
+  max-width: 20vh;
+  max-height: 20vh;
+}
+
+@media only screen and (min-width: 600px) {
+  #title > .spheres {
+    height: 25vw;
+    width: 25vw;
+    aspect-ratio: 1 / 1;
+    background: #468189;
+    border-radius: 50%;
+    background: radial-gradient(circle at 8.33333vw 8.33333vw, #468189, black);
+    -webkit-box-shadow: 2.5vw 2.5vw 5vw rgba(0, 0, 0, 0.2);
+            box-shadow: 2.5vw 2.5vw 5vw rgba(0, 0, 0, 0.2);
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  #title > .spheres {
+    height: 20vw;
+    width: 20vw;
+    aspect-ratio: 1 / 1;
+    background: #468189;
+    border-radius: 50%;
+    background: radial-gradient(circle at 6.66667vw 6.66667vw, #468189, black);
+    -webkit-box-shadow: 2vw 2vw 4vw rgba(0, 0, 0, 0.2);
+            box-shadow: 2vw 2vw 4vw rgba(0, 0, 0, 0.2);
+  }
+}
+
+@-webkit-keyframes scrolling {
+  0% {
+    top: 0;
+  }
+  90% {
+    top: -350%;
+  }
+  100% {
+    top: -500%;
+  }
+}
+
+@keyframes scrolling {
+  0% {
+    top: 0;
+  }
+  90% {
+    top: -350%;
+  }
+  100% {
+    top: -500%;
+  }
+}
+
+@-webkit-keyframes marquee {
+  0% {
+  }
+  80% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+}
+
+@keyframes marquee {
+  0% {
+  }
+  80% {
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+  }
+}
+
+#zen-preamble {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  #zen-preamble {
+    display: block;
+    overflow: hidden;
+    max-height: 20vh;
+  }
+}
+
+#zen-preamble *:not(:first-child) {
+  top: 6em;
+  margin-left: 2em;
+  margin-right: 2em;
+  position: relative;
+  -webkit-animation: scrolling 40s linear infinite;
+          animation: scrolling 40s linear infinite;
+  padding: 10px;
+  z-index: -1;
+}
+
+#zen-preamble svg {
+  width: 7vw;
+  height: 7vw;
+}
+
+.main.supporting {
+  margin-top: 40vh;
+}
+
+@media only screen and (min-width: 600px) {
+  .main.supporting {
+    margin-top: 20vh;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .main.supporting {
+    margin-top: 20vh;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main.supporting {
+    margin-top: 20vh;
+  }
+}
+
+.main.supporting > *:not(:last-child) {
+  height: 25vh;
+  width: 25vh;
+  aspect-ratio: 1 / 1;
+  background: #468189;
+  border-radius: 50%;
+  background: radial-gradient(circle at 8.33333vh 8.33333vh, #468189, black);
+  -webkit-box-shadow: 2.5vh 2.5vh 5vh rgba(0, 0, 0, 0.2);
+          box-shadow: 2.5vh 2.5vh 5vh rgba(0, 0, 0, 0.2);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 6rem;
+  position: -webkit-sticky;
+  position: sticky;
+  margin: auto auto auto 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 600px) {
+  .main.supporting > *:not(:last-child) {
+    height: 40vh;
+    width: 40vh;
+    aspect-ratio: 1 / 1;
+    background: #468189;
+    border-radius: 50%;
+    background: radial-gradient(circle at 13.33333vh 13.33333vh, #468189, black);
+    -webkit-box-shadow: 4vh 4vh 8vh rgba(0, 0, 0, 0.2);
+            box-shadow: 4vh 4vh 8vh rgba(0, 0, 0, 0.2);
+    margin: auto auto auto 0;
+    bottom: 40vh;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .main.supporting > *:not(:last-child) {
+    height: 55vh;
+    width: 55vh;
+    aspect-ratio: 1 / 1;
+    background: #468189;
+    border-radius: 50%;
+    background: radial-gradient(circle at 18.33333vh 18.33333vh, #468189, black);
+    -webkit-box-shadow: 5.5vh 5.5vh 11vh rgba(0, 0, 0, 0.2);
+            box-shadow: 5.5vh 5.5vh 11vh rgba(0, 0, 0, 0.2);
+    margin: auto auto auto 3vw;
+    bottom: 25vh;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main.supporting > *:not(:last-child) {
+    height: 60vh;
+    width: 60vh;
+    aspect-ratio: 1 / 1;
+    background: #468189;
+    border-radius: 50%;
+    background: radial-gradient(circle at 20vh 20vh, #468189, black);
+    -webkit-box-shadow: 6vh 6vh 12vh rgba(0, 0, 0, 0.2);
+            box-shadow: 6vh 6vh 12vh rgba(0, 0, 0, 0.2);
+    bottom: 10vh;
+  }
+}
+
+.main.supporting > *:nth-child(2) {
+  z-index: -2;
+}
+
+.main.supporting > *:nth-child(3) {
+  z-index: -3;
+}
+
+.main.supporting > *:nth-child(4) {
+  z-index: -4;
+  margin-bottom: 100vh;
+}
+
+main.supporting p {
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+  width: 50vw;
+}
+
+#zen-explanation h3 {
+  overflow: hidden;
+}
+
+#zen-explanation .spheres {
+  position: absolute;
+  width: 0;
+  height: 0;
+  -webkit-animation: orbit 10s ease infinite;
+          animation: orbit 10s ease infinite;
+}
+
+#zen-explanation p {
+  top: 6em;
+  margin-left: 2em;
+  margin-right: 2em;
+  position: relative;
+  -webkit-animation: marquee 60s linear infinite;
+          animation: marquee 60s linear infinite;
+}
+
+#zen-participation {
+  overflow: hidden;
+}
+
+#zen-participation p {
+  top: 6em;
+  margin-left: 2em;
+  margin-right: 2em;
+  position: relative;
+  -webkit-animation: marquee 60s linear infinite;
+          animation: marquee 60s linear infinite;
+}
+
+#zen-participation .spheres {
+  position: absolute;
+  width: 0;
+  height: 0;
+  -webkit-animation: orbit 10s ease infinite;
+          animation: orbit 10s ease infinite;
+}
+
+#zen-requirements {
+  overflow: hidden;
+}
+
+#zen-requirements p {
+  top: 6em;
+  margin-left: 2em;
+  margin-right: 2em;
+  position: relative;
+  -webkit-animation: marquee 40s linear infinite;
+          animation: marquee 40s linear infinite;
+}
+
+#zen-requirements .spheres {
+  position: absolute;
+  width: 0;
+  height: 0;
+  -webkit-animation: orbit 10s ease infinite;
+          animation: orbit 10s ease infinite;
+}
+
+#zen-benefits {
+  overflow: hidden;
+}
+
+#zen-benefits p {
+  top: 6em;
+  margin-left: 2em;
+  margin-right: 2em;
+  position: relative;
+  -webkit-animation: marquee 80s linear infinite;
+          animation: marquee 80s linear infinite;
+}
+
+#zen-benefits .spheres {
+  position: absolute;
+  width: 0;
+  height: 0;
+  -webkit-animation: orbit 10s ease infinite;
+          animation: orbit 10s ease infinite;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .sidebar {
+    right: 5vw;
+    top: 30vh;
+  }
+}
+
+.wrapper {
+  height: 10vw;
+  width: 10vw;
+  aspect-ratio: 1 / 1;
+  background: #77aca2;
+  border-radius: 50%;
+  background: radial-gradient(circle at 3.33333vw 3.33333vw, #77aca2, black);
+  -webkit-box-shadow: 1vw 1vw 2vw rgba(0, 0, 0, 0.2);
+          box-shadow: 1vw 1vw 2vw rgba(0, 0, 0, 0.2);
+  position: fixed;
+  right: 10vw;
+  top: 5vh;
+  width: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media only screen and (min-width: 600px) {
+  .wrapper {
+    position: relative;
+  }
+}
+
+.wrapper ul,
+.wrapper > * {
+  display: none;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.wrapper > * {
+  display: block;
+}
+
+@media only screen and (min-width: 600px) {
+  .wrapper > * {
+    position: absolute;
+    top: calc(50% - 1vw);
+    left: calc(50% - 1vw);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #design-selection {
+    -webkit-transform: rotate(180deg) translateX(7vw) rotate(-180deg);
+            transform: rotate(180deg) translateX(7vw) rotate(-180deg);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #design-archives {
+    -webkit-transform: rotate(240deg) translateX(7vw) rotate(-240deg);
+            transform: rotate(240deg) translateX(7vw) rotate(-240deg);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #zen-resources {
+    -webkit-transform: rotate(300deg) translateX(7vw) rotate(-300deg);
+            transform: rotate(300deg) translateX(7vw) rotate(-300deg);
+  }
+}
+
+.wrapper svg.spheres {
+  cursor: pointer;
+  height: 4vw;
+  width: 4vw;
+  aspect-ratio: 1 / 1;
+  background: #77aca2;
+  border-radius: 50%;
+  background: radial-gradient(circle at 1.33333vw 1.33333vw, #77aca2, black);
+  -webkit-box-shadow: 0.4vw 0.4vw 0.8vw rgba(0, 0, 0, 0.2);
+          box-shadow: 0.4vw 0.4vw 0.8vw rgba(0, 0, 0, 0.2);
+  font-size: 1em;
+  width: 5vw;
+  height: 5vw;
+  display: inline-block;
+  top: calc(50% - 4vw);
+  left: calc(50% - 4vw);
+  -webkit-transition: height 0.5s, width 0.5s, -webkit-transform 0.5s;
+  transition: height 0.5s, width 0.5s, -webkit-transform 0.5s;
+  transition: height 0.5s, width 0.5s, transform 0.5s;
+  transition: height 0.5s, width 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+.wrapper > * li {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+@media only screen and (min-width: 600px) {
+  .wrapper > * li {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.design-selection:hover ul,
+.design-archives:hover ul,
+.zen-resources:hover ul {
+  position: absolute;
+}
+
+@media only screen and (min-width: 600px) {
+  .design-selection:hover ul,
+  .design-archives:hover ul,
+  .zen-resources:hover ul {
+    position: relative;
+    list-style-type: none;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 10vw;
+  }
+}
+
+footer {
+  position: fixed;
+  left: none;
+  bottom: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  footer {
+    margin: 2em;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.spheres {
+  font-size: .55em;
+}
+/*# sourceMappingURL=index.css.map */

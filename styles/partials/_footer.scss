@@ -1,0 +1,10 @@
+footer {
+   position: fixed;
+   left: none;
+   bottom: 0;
+   @include MQ(S) {
+    margin: 2em;
+    right: 0;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,37 @@
+@mixin scrollSphereContainer {
+   overflow: hidden;
+}
+
+@mixin scrollText($speed) {
+   top: 6em;
+   margin-left: 2em;
+   margin-right: 2em;
+   position: relative;
+   animation: scrolling $speed linear infinite;
+}
+
+@mixin marqueeText($speed) {
+   top: 6em;
+   margin-left: 2em;
+   margin-right: 2em;
+   position: relative;
+   animation: marquee $speed linear infinite;
+}
+
+@mixin scrollTextHover {
+   animation-play-state: paused;
+   background-color: black;
+   z-index: 999;
+}
+
+@keyframes scrolling {
+   0% { top: 0}
+   90% {top: -350%}
+   100% {top: -500%}
+}
+
+@keyframes marquee {
+   0% {}
+   80% {transform: translateY(-100%);}
+   100% {transform: translateY(50%);}
+}
